@@ -53,8 +53,8 @@ func archive() {
 		return
 	}
 
-	os.Mkdir("archives", 0755)
-	name := fmt.Sprintf("archives/%s.txt", time.Now().Format("2006-01-02"))
+	os.MkdirAll("archives/kuaishou", 0755)
+	name := fmt.Sprintf("archives/kuaishou/%s.txt", time.Now().Format("2006-01-02"))
 	b, err = os.ReadFile(name)
 	if err != nil {
 		if !os.IsNotExist(err) {
